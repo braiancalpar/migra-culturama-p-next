@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Fjalla_One, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import Header from '@/layout/ui/header'
+import ScrollToTop from '@/layout/ui/scroll-to-top'
 
 const fjallaOne = Fjalla_One({
   weight: "400",
@@ -29,6 +31,8 @@ export default function RootLayout({
       <body
         className={`${fjallaOne.variable} ${workSans.variable} antialiased`}
       >
+        <ScrollToTop/>
+        <Header/>
         <Providers>{children}</Providers>
       </body>
     </html>
