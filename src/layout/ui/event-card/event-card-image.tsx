@@ -28,8 +28,9 @@ const EventCardImage = ({
         <Image
           src={fallbackLogo}
           alt={title}
+          width={48}
           height={48}
-          className="w-auto opacity-70"
+          className="opacity-70"
         />
       </div>
     );

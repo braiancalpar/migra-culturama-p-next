@@ -13,7 +13,7 @@ const Header = () => {
   const handleSearch = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/search/${encodeURIComponent(searchQuery)}`);
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
       setSearchQuery("");
     }
   };
@@ -72,7 +72,7 @@ const Header = () => {
               </button>
             </form>
           </div>
-          {/* Navigation */}
+
           <nav className="flex gap-6">
             <Link
               href="/events"
@@ -89,7 +89,7 @@ const Header = () => {
               href="/categories"
               className={`font-medium transition-colors ${
                 isActiveRoute("/categories") ||
-                location.pathname.startsWith("/categories/")
+                pathname?.startsWith("/categories/")
                   ? "text-yellow-400"
                   : "text-white hover:text-yellow-400"
               }`}
