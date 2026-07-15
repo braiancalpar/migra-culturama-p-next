@@ -8,7 +8,7 @@ type ButtonBaseProps = {
 };
 
 type ButtonAsLink = ButtonBaseProps & {
-  href: string;
+  href?: string;
   onClick?: never;
 };
 
@@ -28,10 +28,10 @@ const Button = ({
   type = "button",
 }: ButtonProps) => {
   const baseStyles =
-    "min-w-[180px] h-[40px] px-6 bg-black text-white text-lg font-medium rounded-md transition-all hover:bg-yellow";
+    "min-w-[180px] h-[40px] px-6 bg-black text-white text-lg font-medium rounded-md transition-all hover:bg-yellow-400 inline-flex items-center justify-center";
   const disabledStyles = "disabled:opacity-50 disabled:cursor-not-allowed";
   const combinedStyles = `${baseStyles} ${disabled ? disabledStyles : ""} ${className}`;
-  const fontStyle = { fontFamily: "Work Sans, sans-serif" };
+  const fontStyle = { fontFamily: "'Work Sans', sans-serif" };
 
   if (href) {
     return (
