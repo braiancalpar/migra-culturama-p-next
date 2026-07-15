@@ -1,3 +1,1 @@
-export default function CategoryPage() {
-  return <main>Detalhes da categoria</main>;
-}
+export { default } from "../../categories/page";
