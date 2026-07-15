@@ -4,8 +4,6 @@ export default function HelloWorldLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className="bg-red-400">{children}</body>
-    </html>
+    <div className="bg-red-400 min-h-screen">{children}</div>
   );
 }
